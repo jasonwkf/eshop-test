@@ -26,4 +26,4 @@
 2. Add your logic here.
 
 ## Video for reference
-The interaction logic can be reference at teh video-for-reference folder
+The interaction logic can be reference at the video-for-reference folder
