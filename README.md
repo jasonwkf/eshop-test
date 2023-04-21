@@ -17,7 +17,7 @@
 ## Style dropdown for mobile
 1. Go to _components.scss search for  "select-container" class. Style your sdropdown under this class. You can reference the design and functionality at:
 
-	a. [figma]https://www.figma.com/file/9MyZk0twCDfmjYASiYODvA/M1-Flow?node-id=141%3A16852&t=YJRge1W1MsDcnnAJ-1
+	a. [figma](https://www.figma.com/file/9MyZk0twCDfmjYASiYODvA/M1-Flow?node-id=141%3A16852&t=YJRge1W1MsDcnnAJ-1)
 	b.[figma-prototyoe](https://www.figma.com/proto/9MyZk0twCDfmjYASiYODvA/M1-Flow?page-id=141%3A16595&node-id=141-16852&viewport=1638%2C779%2C0.5&scaling=scale-down&starting-point-node-id=141%3A16852)
 
 ## Add Js logic
