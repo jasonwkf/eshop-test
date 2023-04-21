@@ -1,5 +1,4 @@
 # Interview Test
-## eshop v4 design system
 1. npm i all dependencies
 2. type gulp on the terminal to start the task and localhost serving.
 3. To style the single card plan for desktop
