@@ -5999,127 +5999,35 @@
 
       .card-plan-single {
         .card-plan {
-          // padding: 32px 24px;
-          // filter: drop-shadow(0px 4px 12px rgba(18, 18, 18, 0.1));
-          // border-radius: 8px;
-          // height: 328px;
-          // text-align: center;
-          // @include themed() {
-          //   background-color: t(theme-background);
-          // }
 
-          // img {
-          //   height: auto;
-          //   width: 100%;
-
-          //   @include media-breakpoint-up(sm) {
-          //     height: 80px;
-          //     width: auto;
-          //     max-width: 100%;
-          //   }
-          // }
 
           .plan-title {
 
           }
 
           .plan-value {
-            // .val-prop {
-            //   margin-left: 0;
 
-            //   li {
-            //     // list-style-type: disc;
-            //     .body-text {
-            //       font-size: 18px;
-            //     }
-            //     &::before {
-            //       content: none;
-            //     }
-            //   }
-            // }
           }
 
           .plan-cta {
-            // bottom: 24px;
-            // .form-style {
-            //   margin-bottom: 0;
-            //   .cta-button {
-            //     text-transform: uppercase;
-            //     font-size: 18px;
-            //     font-weight: 600;
 
-            //     &:disabled {
-            //       border: none;
-            //       @include themed() {
-            //         background-color: t($theme-alt-background);
-            //         color: t($theme-muted-text);
-            //       }
-            //     }
-            //   }
-            // }
           }
 
           &.select-container {
-            // text-align: left;
-            // min-height: 248px;
-            // height: auto;
+
 
             .dropdown-select-container {
-              // border-radius: 4px;
-              // border: solid 1px $input-border;
-              // background-color: $background;
-              // position: relative;
+
 
               .dropdown-select-options {
-                // border: solid 1px $input-border;
-                // background-color: $background;
-                // margin-top: 4px;
-                // border-radius: 4px;
-                // overflow-y: visible;
-                // max-height: max-content;
-                // position: relative;
-                // display: none;
-                // z-index: 900;
 
-                // @include media-breakpoint-up(md) {
-                //   position: relative;
-                //   display: block;
-                //   border: 0;
-                // }
 
                 .multi-select {
-                  // padding: 24px;
-                  // align-items: flex-start;
-                  // // border-radius: 4px;
-                  // img {
-                  //   width: 40px;
-                  //   height: auto;
-                  //   margin-top: 8px;
-                  // }
 
-                  // &:first-child {
-                  //   border-radius: 4px 4px 0 0;
-                  // }
-
-                  // &:last-child {
-                  //   border-radius: 0 0 4px 4px;
-                  // }
-
-                  // p {
-                  //   margin: 0 16px;
-                  // }
                 }
 
                 .selection {
-                  // &:checked + label {
-                  //   background-color: #f5f8fe;
-                  //   border: 1px solid $active-border;
-                  // }
 
-                  // &:disabled + label {
-                  //   background-color: $alt-background;
-                  //   opacity: 0.4;
-                  // }
                 }
               }
 
@@ -6130,47 +6038,7 @@
                 background-repeat: no-repeat;
 
                 .selected {
-                  // width: 100%;
-                  // margin: 0;
-                  // border: 0;
-                  // font-size: 1.125rem;
-                  // border-bottom: solid 1px $tertiary-background;
-                  // padding: 24px;
-                  // background-color: transparent;
-                  // border-radius: 0;
-                  // cursor: pointer;
-                  // display: block;
 
-                  // p {
-                  //   margin: 0 16px;
-                  //   display: inline-block;
-
-                  //   @include media-breakpoint-down(xs) {
-                  //     margin: 0 4px;
-                  //   }
-
-                  //   &.placeholder {
-                  //     margin: 0;
-                  //     color: $muted-text;
-                  //   }
-                  // }
-
-                  // img[src=""] {
-                  //   display: none;
-                  // }
-
-                  // img {
-                  //   width: auto;
-                  //   height: 40px;
-                  // }
-
-                  // &::before {
-                  //   display: none;
-                  // }
-
-                  // &:last-child {
-                  //   border: 0;
-                  // }
                 }
               }
             }
@@ -6192,10 +6060,6 @@
             }
           }
         }
-
-        // &.disabled {
-        //   opacity: 0.4;;
-        // }
       }
 
       &:nth-child(1),
