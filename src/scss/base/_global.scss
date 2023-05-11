@@ -348,6 +348,9 @@ img {
       h2 {
         font-size: 36px;
         line-height: normal;
+        @media (max-width:992px) {
+          font-size: 24px;          
+        }
       }
     }
   }
