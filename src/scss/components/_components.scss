@@ -6008,7 +6008,7 @@
           }
 
           padding: $padding-md $padding-sm + $padding-xs;
-          border-radius: $card-border-radiu;
+          border-radius: $card-border-radius;
 
           .plan-title {
               p{
@@ -6062,7 +6062,7 @@
                 max-height: max-content;
                 border: 1px solid $input-border;
                 margin-top: 4px;
-                border-radius: $card-border-radiu;
+                border-radius: $card-border-radius;
                 display: none;
 
                 @include media-breakpoint-up(md) {
@@ -6106,7 +6106,7 @@
                    font-size: 1.125rem;
                    padding: $padding-xs + $padding-sm;
                    border: 1px solid $input-border;
-                   border-radius:$card-border-radiu;
+                   border-radius:$card-border-radius;
                    p {
                      margin: 0 16px;
                      display: inline-block;
@@ -6146,13 +6146,6 @@
             }
           }
         }
-      }
-
-      #pub-item-input, #mag-item-input {
-        border: none;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 22px;
       }
 
       &:nth-child(1),
