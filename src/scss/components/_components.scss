@@ -6004,11 +6004,11 @@
           }
           @include media-breakpoint-up(md) {
             text-align: center;
+            min-height: 328px;
           }
 
           padding: $padding-md $padding-sm + $padding-xs;
-          border-radius: 4px;
-          min-height: 328px;
+          border-radius: $card-border-radiu;
 
           .plan-title {
               p{
@@ -6046,6 +6046,11 @@
                 text-transform: uppercase;
                 font-weight: 600;
               }
+              .cta-button-active {
+                overflow: hidden;
+                height: 100%;
+                background-color: #0ca86c;
+              }
             }
           }
 
@@ -6055,9 +6060,9 @@
             .dropdown-select-container {
               .dropdown-select-options {
                 max-height: max-content;
-                border: 1px solid  $input-border;
+                border: 1px solid $input-border;
                 margin-top: 4px;
-                border-radius: 4px;
+                border-radius: $card-border-radiu;
                 display: none;
 
                 @include media-breakpoint-up(md) {
@@ -6067,6 +6072,8 @@
                  }
 
                 .multi-select {
+                  padding: $padding-xs + $padding-sm;
+                  align-items: flex-start;
                   p {
                     margin: 0 16px;
                   }
@@ -6075,14 +6082,6 @@
                     height: auto;
                     margin-top: 8px;
                   }
-                  &:first-child {
-                    border-radius: 4px 4px 0 0;
-                  }
-                  &:last-child {
-                    border-radius: 0 0 4px 4px;
-                  }
-                  padding: 24px;
-                  align-items: flex-start;
                 }
 
                 .selection {
@@ -6105,19 +6104,15 @@
 
                 .selected {
                    font-size: 1.125rem;
-                   padding: 24px;
-                   border: 1px solid $input-border !important;
-                   border-radius:4px;
+                   padding: $padding-xs + $padding-sm;
+                   border: 1px solid $input-border;
+                   border-radius:$card-border-radiu;
                    p {
                      margin: 0 16px;
                      display: inline-block;
 
-                     @include media-breakpoint-down(xs) {
-                       margin: 0 4px;
-                     }
-
                      &.placeholder {
-                       margin: 0;
+                       margin-left: 16px;
                        color: $muted-text;
                      }
                    }
@@ -6129,14 +6124,6 @@
                    img {
                      width: auto;
                      height: 40px;
-                   }
-
-                   &::before {
-                     display: none;
-                   }
-
-                   &:last-child {
-                     border: 0;
                    }
                 }
               }
@@ -6159,6 +6146,13 @@
             }
           }
         }
+      }
+
+      #pub-item-input, #mag-item-input {
+        border: none;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
       }
 
       &:nth-child(1),
