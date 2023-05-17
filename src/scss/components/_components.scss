@@ -5999,18 +5999,47 @@
 
       .card-plan-single {
         .card-plan {
-
+          @include themed() {
+            background-color: t($theme-background);
+          }
+          @include media-breakpoint-up(md) {
+            text-align: center;
+          }
+          padding: $padding-md $padding-sm + $padding-xs;
+          border-radius: 4px;
+          min-height: 328px;
 
           .plan-title {
-
+             img {
+               @include media-breakpoint-up(sm) {
+                 height: 80px;
+                 max-width: 100%;
+               }
+             }
           }
 
           .plan-value {
-
+             .val-prop {
+               margin-left: 0;
+               li {
+                 .body-text {
+                   //If we want to break the words as the figma, we need to add <span> in the sentence and set word-break to be break-all.
+                   //But here I am not sure whether I can modify pug file, so I just leave this annotation.
+                   line-height: 25px;
+                 }
+               }
+             }
           }
 
           .plan-cta {
-
+            bottom: 24px;
+            .form-style {
+              margin-bottom: 0;
+              .cta-button {
+                text-transform: uppercase;
+                font-weight: 600;
+              }
+            }
           }
 
           &.select-container {
