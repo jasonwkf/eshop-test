@@ -6000,18 +6000,17 @@
       .card-plan-single {
         .card-plan {
           text-align: center;
-          padding: $padding-sm + $padding-xs;
-          padding-top: $padding-md;
+          padding: $padding-md $padding-sm + $padding-xs;
 
           @include media-breakpoint-up(md) {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             min-height: 320px;
-            box-shadow: 1px -1px 19px 7px rgba(0,0,0,0.1);
-            -webkit-box-shadow: 1px -1px 19px 7px rgba(0,0,0,0.1);
-            -moz-box-shadow: 1px -1px 19px 7px rgba(0,0,0,0.1);
-            border-radius: $card-border-radius;
+            box-shadow: 0px 0px 19px 7px rgba(0,0,0,0.1);
+            -webkit-box-shadow: 0px 0px 19px 7px rgba(0,0,0,0.1);
+            -moz-box-shadow: 0px 0px 19px 7px rgba(0,0,0,0.1);
+            border-radius: $card-border-radius 0 0 $card-border-radius;
           }
 
           .plan-title {
