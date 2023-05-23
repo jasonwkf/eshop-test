@@ -2,14 +2,15 @@ mixin comp-card-plan-single-a(obj)
 	// CARD SINGLE START HERE
 	.comp.card-plan-single
 		.card-plan
-			.plan-title
-				img(src=obj.packageImg)
-			.plan-value
-				if obj.baseDollar != "" && obj.baseCent != ""
-					p.caption Includes:
-				ul.val-prop
-					each valprop in obj.valueProp
-						li.bodytext !{valprop.val}
+			.plan-title-value 
+				.plan-title
+					img(src=obj.packageImg)
+				.plan-value
+					if obj.baseDollar != "" && obj.baseCent != ""
+						p.caption Includes:
+					ul.val-prop
+						each valprop in obj.valueProp
+							li.bodytext !{valprop.val}
 			.plan-cta
 				if obj.baseDollar != "" && obj.baseCent != ""
 					p.current-price.section-title $!{obj.baseDollar}.!{obj.baseCent}

@@ -6078,13 +6078,21 @@
   &.card-plan-single {
     height: 100%;
     .card-plan {
-      text-align: left;
-      height: 100%;
       position: relative;
-      padding: $padding-sm $padding-sm + $padding-xs;
-      padding-bottom: 50%;
+      text-align: center;
+      height: 100%;
+      padding: $padding-sm + $padding-xs;
+      padding-top: $padding-md;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 320px;
+      box-shadow: 1px -1px 19px 7px rgba(0,0,0,0.1);
+      -webkit-box-shadow: 1px -1px 19px 7px rgba(0,0,0,0.1);
+      -moz-box-shadow: 1px -1px 19px 7px rgba(0,0,0,0.1);
+      border-radius: $card-border-radius;
       @include themed() {
-        background-color: t($theme-alt-background);
+        background-color: t($theme-promo-bg);
       }
       &.promo {
         border-style: solid;
@@ -6132,7 +6140,7 @@
       .val-prop {
         margin: 0;
         padding: 0;
-        margin-left: 2rem;
+        /* margin-left: 2rem; */
         padding-bottom: 16px;
         position: relative;
 
@@ -6178,11 +6186,10 @@
       }
     }
     .plan-cta {
-      position: absolute;
+      position: relative;
       width: 100%;
       left: 0;
       bottom: 0;
-      padding: 0 $padding-sm + $padding-xs;
       .usual-price {
         text-decoration: line-through;
         margin: 0;
@@ -6207,12 +6214,22 @@
           color: t($theme-muted-text);
         }
       }
+      
+      form {
+        margin-bottom: 0; 
+      }
+
       button {
         &.cta-button {
+          text-transform: uppercase;
           @include themed() {
             background-color: t($theme-primary-button);
           }
-        }
+
+          &.active {
+            background-color : #0ca86c; //$color-green
+          }
+       }
       }
     }
   }
