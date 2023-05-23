@@ -10,7 +10,8 @@ mixin comp-card-plan-single-dropdown(obj)
 					.dropdown-select-selected(class=obj.customClass data-err=0)
 						.selected
 							img.paymentImg(src="")
-							p.label.placeholder Select Publication
+							p.label.placeholder !{obj.dropdownGhostText}
+							img.dropdown-icon(src="../images/icons/ArrowDown.svg")
 					.dropdown-select-options(class=obj.customClass)
 						.form-row
 							.form-element.select

@@ -70,14 +70,14 @@ block content
             .container
               .row
                 .col-12.promo-single-container.px-3
-                  +comp-card-plan-single-dropdown({plans: mobile_one, pub: 'pub-select', step: 1, header: 'Choose your preferred news publication', customClass:'mutli-select-pub', disabled: false})
+                  +comp-card-plan-single-dropdown({plans: mobile_one, pub: 'pub-select', step: 1, header: 'Choose your preferred news publication', customClass:'mutli-select-pub', dropdownGhostText: 'Select publication', disabled: false})
       .section-body
         .comp.comp-card-plan
           .comp-holder
             .container
               .row
                 .col-12.promo-single-container.px-3
-                  +comp-card-plan-single-dropdown({plans: mobile_one_mag, pub: 'mag-select', step: 2, header: 'Choose your preferred magazine', customClass:'mutli-select-mag', disabled: true})
+                  +comp-card-plan-single-dropdown({plans: mobile_one_mag, pub: 'mag-select', step: 2, header: 'Choose your preferred magazine', customClass:'mutli-select-mag', dropdownGhostText: 'Select magazine', disabled: true})
 block scripts
   script(src=absoluteUrl + 'js/plan-selection.js')
   script(src=absoluteUrl + 'js/lightbox.js')
