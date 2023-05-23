@@ -6212,7 +6212,7 @@
       }
     }
     .plan-cta {
-      position: relative;
+      position: absolute;
       width: 100%;
       left: 0;
       bottom: 0;
@@ -6240,22 +6240,13 @@
           color: t($theme-muted-text);
         }
       }
-      
-      form {
-        margin-bottom: 0; 
-      }
-
+    
       button {
         &.cta-button {
-          text-transform: uppercase;
           @include themed() {
             background-color: t($theme-primary-button);
           }
-
-          &.active {
-            background-color : #0ca86c; //$color-green
-          }
-       }
+        }
       }
     }
   }
