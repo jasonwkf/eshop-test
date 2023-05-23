@@ -5999,18 +5999,44 @@
 
       .card-plan-single {
         .card-plan {
-
+          text-align: center;
+          padding: $padding-sm + $padding-xs;
+          padding-top: $padding-md;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          min-height: 320px;
+          box-shadow: 1px -1px 19px 7px rgba(0,0,0,0.1);
+          -webkit-box-shadow: 1px -1px 19px 7px rgba(0,0,0,0.1);
+          -moz-box-shadow: 1px -1px 19px 7px rgba(0,0,0,0.1);
+          border-radius: $card-border-radius;
 
           .plan-title {
 
           }
 
           .plan-value {
-
+            .val-prop {
+              margin-left: 0;
+            }
           }
 
           .plan-cta {
+            position: relative;
+            
+            form {
+              margin-bottom: 0; 
+            }
 
+            button {
+              &.cta-button {
+                text-transform: uppercase;
+      
+                &.active {
+                  background-color : #0ca86c; //$color-green
+                }
+             }
+            }
           }
 
           &.select-container {
