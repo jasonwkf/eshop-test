@@ -6002,17 +6002,28 @@
           text-align: center;
           padding: $padding-sm + $padding-xs;
           padding-top: $padding-md;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          min-height: 320px;
-          box-shadow: 1px -1px 19px 7px rgba(0,0,0,0.1);
-          -webkit-box-shadow: 1px -1px 19px 7px rgba(0,0,0,0.1);
-          -moz-box-shadow: 1px -1px 19px 7px rgba(0,0,0,0.1);
-          border-radius: $card-border-radius;
+
+          @include media-breakpoint-up(md) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 320px;
+            box-shadow: 1px -1px 19px 7px rgba(0,0,0,0.1);
+            -webkit-box-shadow: 1px -1px 19px 7px rgba(0,0,0,0.1);
+            -moz-box-shadow: 1px -1px 19px 7px rgba(0,0,0,0.1);
+            border-radius: $card-border-radius;
+          }
 
           .plan-title {
+            text-align: left;
+            
+            p { 
+              margin-bottom: $padding-xxs + $padding-xs;
+            }
 
+            @include media-breakpoint-up(md) {
+              text-align: center;
+            }
           }
 
           .plan-value {
@@ -6180,14 +6191,6 @@
       height: 100%;
       padding: $padding-sm + $padding-xs;
       padding-top: $padding-md;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 320px;
-      box-shadow: 1px -1px 19px 7px rgba(0,0,0,0.1);
-      -webkit-box-shadow: 1px -1px 19px 7px rgba(0,0,0,0.1);
-      -moz-box-shadow: 1px -1px 19px 7px rgba(0,0,0,0.1);
-      border-radius: $card-border-radius;
       @include themed() {
         background-color: t($theme-promo-bg);
       }
