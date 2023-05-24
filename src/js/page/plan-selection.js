@@ -92,21 +92,21 @@ $(function () {
 
   // step 1 interaction
   if ($('#step-1-desktop').length > 0 || $('.mutli-select-pub').length > 0) {
+    let pubSelectedValue;
+    const pubDropdownSelected = '.mutli-select-pub.dropdown-select-selected';
+    const pubDropdownOptions = '.mutli-select-pub.dropdown-select-options';
+    const pubDropdownOptionsSelection = '.mutli-select-pub.dropdown-select-options .selection';
+    const pubCtaButtons = '.pub-plan-single .cta-button';
+
+    // desktop card plan select
     $('.pub-plan-single').each(function () {
       let _this = this;
-      let selectedValue;
-      const dropdownSelected = '.mutli-select-pub.dropdown-select-selected';
-      const dropdownOptions = '.mutli-select-pub.dropdown-select-options';
-      const dropdownOptionsSelection = '.mutli-select-pub.dropdown-select-options .selection';
-      const ctaButtons = '.pub-plan-single .cta-button';
-
-      // desktop card plan select
-      $(_this).find('.cta-button').on('click', function (e) {
+      $(_this).find('.cta-button').off().on('click', function (e) {
         e.preventDefault();
-        selectedValue = $(this).data('id');
-        activateSelectButton(this, ctaButtons);
-        setCatfishValue('#pub-item', selectedValue);
-        updateDropdownValue(selectedValue, dropdownOptionsSelection, dropdownSelected);
+        pubSelectedValue = $(this).data('id');
+        activateSelectButton(this, pubCtaButtons);
+        setCatfishValue('#pub-item', pubSelectedValue);
+        updateDropdownValue(pubSelectedValue, pubDropdownOptionsSelection, pubDropdownSelected);
 
         // anchor to step 2
         setTimeout(function () {
@@ -117,54 +117,54 @@ $(function () {
           });
         }, 200);
       });
+    });
 
-      // mobile dropdown select
-      toggleDropdown(dropdownSelected, dropdownOptions);
-      $(dropdownOptionsSelection).off().on("click", function () {
-        setDropdownValue(this, dropdownSelected, dropdownOptions, ctaButtons);
-        selectedValue = $(this).attr('value');
-        setCatfishValue('#pub-item', selectedValue);
+    // mobile dropdown select
+    toggleDropdown(pubDropdownSelected, pubDropdownOptions);
+    $(pubDropdownOptionsSelection).off().on("click", function () {
+      setDropdownValue(this, pubDropdownSelected, pubDropdownOptions, pubCtaButtons);
+      pubSelectedValue = $(this).attr('value');
+      setCatfishValue('#pub-item', pubSelectedValue);
 
-        // anchor to step 2
-        setTimeout(function () {
-          $('html, body').animate({
-            scrollTop: $(dropdownSelected).offset().top + 150,
-          }, 800, function () {
-            activateStepTwo();
-          });
-        }, 500);
-      });
+      // anchor to step 2
+      setTimeout(function () {
+        $('html, body').animate({
+          scrollTop: $(pubDropdownSelected).offset().top + 150,
+        }, 800, function () {
+          activateStepTwo();
+        });
+      }, 500);
     });
   }
 
   // step 2 interaction
   if ($('#step-2-desktop').length > 0 || $('.mutli-select-mag').length > 0) {
+    let magSelectedValue;
+    const magDropdownSelected = '.mutli-select-mag.dropdown-select-selected';
+    const magDropdownOptions = '.mutli-select-mag.dropdown-select-options';
+    const magDropdownOptionsSelection = '.mutli-select-mag.dropdown-select-options .selection';
+    const magCtaButtons = '.magazine-plan-single .cta-button';
+
+    // desktop card plan select
     $('.magazine-plan-single').each(function () {
       let _this = this;
-      let selectedValue;
-      const dropdownSelected = '.mutli-select-mag.dropdown-select-selected';
-      const dropdownOptions = '.mutli-select-mag.dropdown-select-options';
-      const dropdownOptionsSelection = '.mutli-select-mag.dropdown-select-options .selection';
-      const ctaButtons = '.magazine-plan-single .cta-button';
-
-      // desktop card plan select
       $(_this).find('.cta-button').on('click', function (e) {
         e.preventDefault();
-        selectedValue = $(this).data('id');
-        activateSelectButton(this, ctaButtons);
-        setCatfishValue('#mag-item', selectedValue);
-        updateDropdownValue(selectedValue, dropdownOptionsSelection, dropdownSelected);
+        magSelectedValue = $(this).data('id');
+        activateSelectButton(this, magCtaButtons);
+        setCatfishValue('#mag-item', magSelectedValue);
+        updateDropdownValue(magSelectedValue, magDropdownOptionsSelection, magDropdownSelected);
         displayCatfish();
       });
+    });
 
-      // mobile dropdown select
-      toggleDropdown(dropdownSelected, dropdownOptions);
-      $(dropdownOptionsSelection).off().on("click", function () {
-        setDropdownValue(this, dropdownSelected, dropdownOptions, ctaButtons);
-        selectedValue = $(this).attr('value');
-        setCatfishValue('#mag-item', selectedValue);
-        displayCatfish();
-      });
+    // mobile dropdown select
+    toggleDropdown(magDropdownSelected, magDropdownOptions);
+    $(magDropdownOptionsSelection).off().on("click", function () {
+      setDropdownValue(this, magDropdownSelected, magDropdownOptions, magCtaButtons);
+      magSelectedValue = $(this).attr('value');
+      setCatfishValue('#mag-item', magSelectedValue);
+      displayCatfish();
     });
   }
 
