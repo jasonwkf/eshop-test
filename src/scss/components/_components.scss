@@ -6016,6 +6016,12 @@
           .plan-title {
             text-align: left;
             
+            img {
+              height: 5rem;
+              width: 100%;
+              object-fit: contain;
+            }
+
             p { 
               margin-bottom: $padding-xxs + $padding-xs;
             }
