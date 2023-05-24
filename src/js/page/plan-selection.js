@@ -57,7 +57,10 @@ $(function () {
 
     // set selected value
     $(dropdownSelected).find('.paymentImg').show().attr('src', img);
-    $(dropdownSelected).find('.label').text(label);
+    $(dropdownSelected).find('.label').text(label).css({
+      'font-weight': '600',
+      color: '#000000',
+    });
     $(dropdownSelected).toggleClass('active');
     $(dropdownOptions).toggleClass('active');
 
@@ -125,7 +128,7 @@ $(function () {
         // anchor to step 2
         setTimeout(function () {
           $('html, body').animate({
-            scrollTop: $(dropdownSelected).offset().top + 180,
+            scrollTop: $(dropdownSelected).offset().top + 150,
           }, 800, function () {
             activateStepTwo();
           });
