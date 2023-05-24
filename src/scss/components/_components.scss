@@ -6072,6 +6072,12 @@
                 .multi-select {
                   align-items: start;
                   border: 1px solid $st-grey-900;
+                  padding: $padding-xs + $padding-sm;
+
+                  img {
+                    height: 40px;
+                    width: auto;
+                  }
 
                   .content {
                     margin-left: $padding-sm;
@@ -6094,17 +6100,19 @@
                   &:not(:last-child) {
                     border-bottom: 0;
                   }
+                }
 
-                  &.selected {
+                .selection {
+
+                }
+
+                input[type=radio].selection{
+                  &:checked + label {
                     @include themed() {
                       border: 1.5px solid t($theme-active-border);
                       background: #F5F8FE;
                     }
                   }
-                }
-
-                .selection {
-
                 }
               }
 
@@ -6123,12 +6131,20 @@
                   color: $greyscale-grey-600;
                   padding: $padding-xs+$padding-sm+3 $padding-xs+$padding-sm; 
 
-                  .paymentImg {
-                    display: none; 
-                  }
+                  .img-label {
+                    display: flex; 
+                    align-items: center; 
 
-                  p {
-                    margin-bottom: 0;
+                    .paymentImg {
+                      display: none; 
+                      height: 40px;
+                      width: auto;
+                      padding-right: $padding-sm;
+                    }
+  
+                    p {
+                      margin-bottom: 0;
+                    }
                   }
 
                   .dropdown-icon {

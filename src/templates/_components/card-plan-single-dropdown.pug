@@ -9,8 +9,9 @@ mixin comp-card-plan-single-dropdown(obj)
 				.dropdown-select-container
 					.dropdown-select-selected(class=obj.customClass data-err=0)
 						.selected
-							img.paymentImg(src="")
-							p.label.placeholder !{obj.dropdownGhostText}
+							.img-label
+								img.paymentImg(src="")
+								p.label.placeholder !{obj.dropdownGhostText}
 							img.dropdown-icon(src="../images/icons/ArrowDown.svg")
 					.dropdown-select-options(class=obj.customClass)
 						.form-row
