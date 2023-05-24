@@ -17,7 +17,7 @@ $(function () {
   });
 
   // code here
-  // global function declaration 
+  // global function declaration
   const activateSelectButton = function (item, ctaButtons) {
     $(ctaButtons).each(function () {
       $(this).removeClass('active').text('Select');
@@ -72,9 +72,9 @@ $(function () {
     });
   };
 
-  const toggleDropdown = function (item, dropdownSelected, dropdownOptions) {
+  const toggleDropdown = function (dropdownSelected, dropdownOptions) {
     $(dropdownSelected).off().on('click', function (e) {
-      $(item).toggleClass('active');
+      $(this).toggleClass('active');
       $(dropdownOptions).toggleClass('active');
     });
   };
@@ -86,7 +86,6 @@ $(function () {
     // enabled checkout button
     $('#pub-submit').removeAttr('disabled');
   };
-
 
   // step 1 interaction
   if ($('#step-1-desktop').length > 0 || $('.mutli-select-pub').length > 0) {
@@ -107,28 +106,30 @@ $(function () {
         updateDropdownValue(selectedValue, dropdownOptionsSelection, dropdownSelected);
 
         // anchor to step 2
-        $('html, body').animate({
-          scrollTop: $('#step-2-desktop').offset().top - 30,
-        }, 800, function () {
-          activateStepTwo();
-        });
+        setTimeout(function () {
+          $('html, body').animate({
+            scrollTop: $('#step-2-desktop').offset().top - 30,
+          }, 800, function () {
+            activateStepTwo();
+          });
+        }, 200);
       });
 
       // mobile dropdown select
-      toggleDropdown(_this, dropdownSelected, dropdownOptions);
+      toggleDropdown(dropdownSelected, dropdownOptions);
       $(dropdownOptionsSelection).off().on("click", function () {
         setDropdownValue(this, dropdownSelected, dropdownOptions, ctaButtons);
         selectedValue = $(this).attr('value');
         setCatfishValue('#pub-item', selectedValue);
 
         // anchor to step 2
-        setTimeout(function() {
+        setTimeout(function () {
           $('html, body').animate({
             scrollTop: $(dropdownSelected).offset().top + 180,
           }, 800, function () {
             activateStepTwo();
           });
-        }, 200)
+        }, 500);
       });
     });
   }
@@ -154,7 +155,7 @@ $(function () {
       });
 
       // mobile dropdown select
-      toggleDropdown(_this, dropdownSelected, dropdownOptions);
+      toggleDropdown(dropdownSelected, dropdownOptions);
       $(dropdownOptionsSelection).off().on("click", function () {
         setDropdownValue(this, dropdownSelected, dropdownOptions, ctaButtons);
         selectedValue = $(this).attr('value');
