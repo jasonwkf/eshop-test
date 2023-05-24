@@ -5999,18 +5999,60 @@
 
       .card-plan-single {
         .card-plan {
+          text-align: center;
+          padding: $padding-md $padding-sm + $padding-xs;
 
+          @include media-breakpoint-up(md) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 320px;
+            box-shadow: 0px 0px 19px 7px rgba(0,0,0,0.1);
+            -webkit-box-shadow: 0px 0px 19px 7px rgba(0,0,0,0.1);
+            -moz-box-shadow: 0px 0px 19px 7px rgba(0,0,0,0.1);
+            border-radius: $card-border-radius 0 0 $card-border-radius;
+          }
 
           .plan-title {
+            text-align: left;
+            
+            img {
+              height: 5rem;
+              width: 100%;
+              object-fit: contain;
+            }
 
+            p { 
+              margin-bottom: $padding-xxs + $padding-xs;
+            }
+
+            @include media-breakpoint-up(md) {
+              text-align: center;
+            }
           }
 
           .plan-value {
-
+            .val-prop {
+              margin-left: 0;
+            }
           }
 
           .plan-cta {
+            position: relative;
+            
+            form {
+              margin-bottom: 0; 
+            }
 
+            button {
+              &.cta-button {
+                text-transform: uppercase;
+      
+                &.active {
+                  background-color : #0ca86c; //$color-green
+                }
+             }
+            }
           }
 
           &.select-container {
@@ -6020,25 +6062,114 @@
 
 
               .dropdown-select-options {
+                margin-top: $padding-xxs;
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: max-height 0.5s ease-in-out, opacity 0.6s ease-in-out;
 
+                &.active {
+                  height: auto;
+                  max-height: 500px;
+                  opacity: 1;
+                  transition: max-height 0.5s ease-in-out, opacity 0.6s ease-in-out;
+                }
 
                 .multi-select {
+                  align-items: start;
+                  border: 1px solid $st-grey-900;
+                  padding: $padding-xs + $padding-sm;
 
+                  img {
+                    height: 40px;
+                    width: auto;
+                  }
+
+                  .content {
+                    margin-left: $padding-sm;
+                    text-align: left;
+                  }
+                }
+
+                label {
+                  &:first-of-type {
+                    border-top-left-radius: $card-border-radius; 
+                    border-top-right-radius: $card-border-radius;
+
+                  }
+              
+                  &:last-of-type {
+                    border-bottom-left-radius: $card-border-radius; 
+                    border-bottom-right-radius: $card-border-radius;            
+                  }
+
+                  &:not(:last-child) {
+                    border-bottom: 0;
+                  }
                 }
 
                 .selection {
 
                 }
+
+                input[type=radio].selection{
+                  &:checked + label {
+                    @include themed() {
+                      border: 1.5px solid t($theme-active-border);
+                      background: #F5F8FE;
+                    }
+                  }
+                }
               }
 
               .dropdown-select-selected {
-                background-image: url("../images/icons/ArrowDown.svg");
+                /* background-image: url("../images/icons/ArrowDown.svg"); */
                 background-size: 16px;
                 background-position: center right 24px;
                 background-repeat: no-repeat;
 
                 .selected {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  border: 1.5px solid $greyscale-grey-500;
+                  border-radius: $card-border-radius;
+                  color: $greyscale-grey-600;
+                  padding: $padding-xs+$padding-sm+3 $padding-xs+$padding-sm; 
 
+                  .img-label {
+                    display: flex; 
+                    align-items: center; 
+
+                    .paymentImg {
+                      display: none; 
+                      height: 40px;
+                      width: auto;
+                      padding-right: $padding-sm;
+                    }
+  
+                    p {
+                      margin-bottom: 0;
+                    }
+                  }
+
+                  .dropdown-icon {
+                    width: 13.5px !important;
+                    transform: rotate(0deg);
+                    transition: all 0.5s ease-in-out;
+                  }
+                }
+
+                &.active {
+                  .selected {
+                    @include themed() {
+                      border: 1.5px solid t($theme-active-border);
+                    }
+
+                    .dropdown-icon {
+                      transform: rotate(-180deg);
+                    } 
+                  }
                 }
               }
             }
@@ -6078,13 +6209,13 @@
   &.card-plan-single {
     height: 100%;
     .card-plan {
-      text-align: left;
-      height: 100%;
       position: relative;
-      padding: $padding-sm $padding-sm + $padding-xs;
-      padding-bottom: 50%;
+      text-align: center;
+      height: 100%;
+      padding: $padding-sm + $padding-xs;
+      padding-top: $padding-md;
       @include themed() {
-        background-color: t($theme-alt-background);
+        background-color: t($theme-promo-bg);
       }
       &.promo {
         border-style: solid;
@@ -6132,7 +6263,7 @@
       .val-prop {
         margin: 0;
         padding: 0;
-        margin-left: 2rem;
+        /* margin-left: 2rem; */
         padding-bottom: 16px;
         position: relative;
 
@@ -6182,7 +6313,6 @@
       width: 100%;
       left: 0;
       bottom: 0;
-      padding: 0 $padding-sm + $padding-xs;
       .usual-price {
         text-decoration: line-through;
         margin: 0;
@@ -6207,6 +6337,7 @@
           color: t($theme-muted-text);
         }
       }
+    
       button {
         &.cta-button {
           @include themed() {
@@ -6328,6 +6459,10 @@
         color: $disabled-state-label;
         border: none;
         outline:none;
+      }
+
+      &:hover {
+        border: none;
       }
     }
   }
