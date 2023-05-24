@@ -6136,15 +6136,17 @@
                     transform: rotate(0deg);
                     transition: all 0.5s ease-in-out;
                   }
+                }
 
-                  &.active {
+                &.active {
+                  .selected {
                     @include themed() {
                       border: 1.5px solid t($theme-active-border);
                     }
 
                     .dropdown-icon {
                       transform: rotate(-180deg);
-                    }
+                    } 
                   }
                 }
               }
